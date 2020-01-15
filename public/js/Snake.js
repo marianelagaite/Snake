@@ -23,22 +23,22 @@ export default class Snake {
         switch (event.keyCode) {
             case 37: //left
             case 65: //A
-                if(this.direction !== Phaser.Math.Vector2.RIGHT)
+                if(this.direction !== Phaser.Math.Vector2.RIGHT || this.body.length === 1)
                     this.direction = Phaser.Math.Vector2.LEFT;
                 break;
             case 38: //up
             case 87: //W
-                if(this.direction !== Phaser.Math.Vector2.DOWN)
+                if(this.direction !== Phaser.Math.Vector2.DOWN || this.body.length === 1)
                     this.direction = Phaser.Math.Vector2.UP;
                 break;
             case 39: //right
             case 68: //D
-                if(this.direction !== Phaser.Math.Vector2.LEFT)
+                if(this.direction !== Phaser.Math.Vector2.LEFT || this.body.length === 1)
                     this.direction = Phaser.Math.Vector2.RIGHT;
                 break;
             case 40: //down
             case 83: //S
-                if(this.direction !== Phaser.Math.Vector2.UP)
+                if(this.direction !== Phaser.Math.Vector2.UP || this.body.length === 1)
                     this.direction = Phaser.Math.Vector2.DOWN;
                 break;
         }
